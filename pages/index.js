@@ -1,82 +1,69 @@
-import Head from 'next/head'
+import Image from 'next/image'
+import { Row, Col, Carousel } from "antd"
 
-export default function Home() {
+import Layout from "_components/Layout"
+import ContactInfo from '_components/ContactInfo'
+import slide1 from 'public/img/slide-1.jpg'
+import slide2 from 'public/img/slide-wood.jpg'
+import introImg from 'public/img/intro.jpg'
+
+const contentStyle = {
+  height: '160px',
+  color: '#fff',
+  lineHeight: '160px',
+  textAlign: 'center',
+  background: '#364d79',
+}
+
+export default function Home(props) {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <Layout {...props}>
+      <div className="w-100 overflow-hidden">
+        <Carousel dots={true} autoplay={true} arrows={true} >
+          <div className="my-auto">
+            <Image src={slide1} height="800" />
+          </div>
+          <div className="my-auto">
+            <Image src={slide2} height="800" />
+          </div>
+        </Carousel>
+        <div className="flex flex-col justify-center mb-5">
+          <div className="my-5">
+            <h1 className="text-3xl">Về chúng tôi</h1>
+          </div>
+          <div>
+            <Row className="max-w-screen-xl mx-auto">
+              <Col md={{ span: 12 }} className="text-justify text-right p-4 font-sans text-lg">
 
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
-
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="p-3 font-mono text-lg bg-gray-100 rounded-md">
-            pages/index.js
-          </code>
-        </p>
-
-        <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+                <p>Lời đầu tiên, Công Ty TNHH ĐT SX & Thiết Kế Nội Thất TL xin gửi tới Quý Khách hàng lời chúc sức khỏe, thành công và lời chào trân trọng nhất!</p>
+                <p>Công ty chúng tôi cũng xin gửi lời cảm ơn chân thành nhất tới những khách hàng đã, đang và sẽ cho phép chúng tôi được trở thành người bạn đồng hành cũng như đã dành sự tín nhiệm và ủng hộ tới sản phẩm, dịch vụ mà công ty chúng tôi cung cấp.</p>
+                <p className="break-words">Công Ty TNHH ĐT SX & Thiết Kế Nội Thất TL là Công ty hoạt động trong lĩnh vực: Tư vấn, thiết kế, thi công xây dựng, cải tạo nội thất nhà ở, văn phòng, trường học chuyên nghiệp; được đầu tư Nhà máy trực tiếp sản xuất đồ gỗ nội thất gia đình, văn phòng, trường học, khách sạn.
+                  Công ty tuy là một doanh nghiệp mới thành lập, được nâng cấp từ Xưởng sản xuất đồ gỗ nội thất, nhưng với tầm nhìn dài hạn, được đầu tư bài bản, quản lý hoạt động chuyên nghiệp, xây dựng và khẳng định được uy tín với khách hàng
+                </p>
+                <p className="break-words">
+                  Những ngày đầu thành lập, Nội Thất TL quyết định hướng phát triển chuyên sâu cho sản phẩm nội thất với thương hiệu Nội Thất TL cao cấp. Với quyết tâm không ngừng tìm hiểu, tiếp cận, sử dụng các công nghệ tiên tiến đưa vào sản phẩm, trong một thời gian ngắn chúng tôi đã trở thành một doanh nghiệp hàng đầu trong lĩnh vực sản xuất kinh doanh và tư vấn thiết kế nội thất gia đình, khách sạn, nhà hàng, văn phòng, Karaoke…. Với đội ngũ Công nhân lành nghề có kinh nghiệm cùng với những yêu cầu kỹ thuật cao – Tiêu chuẩn Châu Âu. Đặc biệt các sản phẩm TL được sản xuất trên dây chuyền máy móc công nghệ hiện đại của nhất của các nước tiên tiến, đồng thời dựa trên những nguyên phụ liệu tốt nhất được nhập khẩu từ Châu Âu . Do đó những sản phẩm của TL không những đáp ứng những yêu cầu về thẩm mỹ, độ bền mà còn làm hài lòng những khách hàng khó tính nhất.
+                </p>
+              </Col>
+              <Col md={{ span: 12 }} className="max-w-lg text-left"  >
+                <Image src={introImg} />
+              </Col>
+            </Row>
+          </div>
         </div>
-      </main>
+        <div className="w-100 ">
+          <div className="text-center font-sans text-xl text-white py-5" style={{ backgroundColor: '#7a9c59' }}>
+            <div className="text-center font-bold uppercase text-3xl mb-2">
+              Sản phẩm
+            </div>
+            <div>Nội thất TL xin giới thiệu một số mẫu sản phẩm mà chúng tôi đã sản xuất để quý khách hàng tham khảo.</div>
+            <div>
+              Ngoài ra chúng tôi còn sản xuất theo yêu câu riêng của từng quý khách.
+            </div>
+          </div>
+        </div>
+      </div >
+      <ContactInfo />
 
-      <footer className="flex items-center justify-center w-full h-24 border-t">
-        <a
-          className="flex items-center justify-center"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
-        </a>
-      </footer>
-    </div>
+    </Layout >
   )
 }
