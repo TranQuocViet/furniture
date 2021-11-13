@@ -59,8 +59,12 @@ const Header = props => {
 
       <Drawer placement="left" onClose={onClose} visible={visible} closeIcon={null} bodyStyle={{ backgroundColor: '#565353' }}>
         <div className="flex flex-col uppercase text-lg text-white">
-          <div className="border-b border-white mt-4 p-2">Trang chủ</div>
-          <div className="border-b border-white mt-4 p-2">Giới thiệu</div>
+          <div className="border-b border-white mt-4 p-2">
+            <Link href='/'>Trang chủ</Link>
+          </div>
+          <div className="border-b border-white mt-4 p-2">
+            <Link href='/intro'>Giới thiệu</Link>
+          </div>
           <div className="border-b border-white mt-4 p-2">Sản phẩm</div>
           <div className="border-b border-white mt-4 p-2">Dịch vụ</div>
           <div className="border-b border-white mt-4 p-2">Mẫu thiết kế</div>
