@@ -8,24 +8,19 @@ import logo from '_assets/logo.png'
 
 
 const Header = props => {
-  const [current, setCurrent] = useState('home')
-  const [visible, setVisible] = useState(false);
-  const showDrawer = () => {
-    setVisible(true);
+  const [showDrawer, setDrawer] = useState(false);
+  const changeDrawer = () => {
+    setDrawer(true);
   };
   const onClose = () => {
-    setVisible(false);
+    setDrawer(false);
   };
-  const handleClick = e => {
-    console.log(e)
-    setCurrent(e.key)
-  }
   return (
     <>
       <div className="w-100 bg-gray-50">
         <Row className="w-100 p-3 mx-auto  max-w-screen-xl  sticky top-0  border-b border-solid" justify="space-between" align="middle">
           <Col className="block md:hidden">
-            <Button type="primary" onClick={showDrawer} icon={<UnorderedListOutlined />}>
+            <Button type="primary" onClick={changeDrawer} icon={<UnorderedListOutlined />}>
 
             </Button>
           </Col>
@@ -49,15 +44,19 @@ const Header = props => {
               <Col className="min-w-max hover:cursor-pointer hover:text-green-700">Sản phẩm</Col>
               <Col className="min-w-max hover:cursor-pointer hover:text-green-700">Dịch vụ</Col>
               <Col className="min-w-max hover:cursor-pointer hover:text-green-700">Mẫu thiết kế</Col>
-              <Col className="min-w-max hover:cursor-pointer hover:text-green-700">Dự án tiêu biểu</Col>
-              <Col className="min-w-max hover:cursor-pointer hover:text-green-700">Liên hệ</Col>
+              <Col className="min-w-max hover:cursor-pointer hover:text-green-700">
+                <Link href='/projects'>Dự án tiêu biểu</Link>
+              </Col>
+              <Col className="min-w-max hover:cursor-pointer hover:text-green-700">
+                <Link href='/contact'>Liên hệ</Link>
+              </Col>
             </Row>
           </Col>
         </Row>
       </div>
 
 
-      <Drawer placement="left" onClose={onClose} visible={visible} closeIcon={null} bodyStyle={{ backgroundColor: '#565353' }}>
+      <Drawer placement="left" onClose={onClose} visible={showDrawer} closeIcon={null} bodyStyle={{ backgroundColor: '#565353' }}>
         <div className="flex flex-col uppercase text-lg text-white">
           <div className="border-b border-white mt-4 p-2">
             <Link href='/'>Trang chủ</Link>
@@ -68,8 +67,12 @@ const Header = props => {
           <div className="border-b border-white mt-4 p-2">Sản phẩm</div>
           <div className="border-b border-white mt-4 p-2">Dịch vụ</div>
           <div className="border-b border-white mt-4 p-2">Mẫu thiết kế</div>
-          <div className="border-b border-white mt-4 p-2">Dự án tiêu biểu</div>
-          <div className="border-b border-white mt-4 p-2">Liên hệ</div>
+          <div className="border-b border-white mt-4 p-2">
+            <Link href='/projects'>Dự án tiêu biểu</Link>
+          </div>
+          <div className="border-b border-white mt-4 p-2">
+            <Link href='/contact'>Liên hệ</Link>
+          </div>
         </div>
       </Drawer>
     </>

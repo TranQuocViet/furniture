@@ -2,7 +2,6 @@ import Image from 'next/image'
 import { Row, Col, Carousel } from "antd"
 
 import Layout from "_components/Layout"
-import ContactInfo from '_components/ContactInfo'
 import slide1 from 'public/img/slide-1.jpg'
 import slide2 from 'public/img/slide-wood.jpg'
 import introImg from 'public/img/intro.jpg'
@@ -62,8 +61,6 @@ export default function Home(props) {
           </div>
         </div>
       </div >
-      <ContactInfo />
-
     </Layout >
   )
 }
