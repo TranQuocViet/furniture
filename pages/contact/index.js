@@ -7,7 +7,7 @@ import ContactInfo from '_components/ContactInfo'
 export class index extends Component {
   render() {
     return (
-      <Layout>
+      <Layout activeUrl='/contact'>
         <div className="text-center text-3xl my-3">Thông tin liên hệ</div>
         <Row></Row>
       </Layout>

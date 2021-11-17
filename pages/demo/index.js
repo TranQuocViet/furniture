@@ -2,13 +2,12 @@ import React, { Component } from 'react'
 import { Row, Col } from 'antd'
 
 import Layout from "_components/Layout";
-import ContactInfo from '_components/ContactInfo'
 
 export class index extends Component {
   render() {
     return (
-      <Layout activeUrl='/projects'>
-        <div className="text-center text-3xl my-3">Các dự án chúng tôi đã thi công</div>
+      <Layout activeUrl='/demo'>
+        <div className="text-center text-3xl my-3">Mẫu thiết kế</div>
         <Row>
           <Col>
 

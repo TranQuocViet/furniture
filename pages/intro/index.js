@@ -8,7 +8,7 @@ import introImg from 'public/img/intro.jpg'
 
 const Intro = props => {
   return (
-    <Layout>
+    <Layout {...props} activeUrl='/intro'>
       <div className="flex flex-col justify-center mb-5">
         <div>
           <Row className="max-w-screen-xl mx-auto">

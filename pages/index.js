@@ -16,7 +16,7 @@ const contentStyle = {
 
 export default function Home(props) {
   return (
-    <Layout {...props}>
+    <Layout {...props} activeUrl='/'>
       <div className="w-100 overflow-hidden">
         <Carousel dots={true} autoplay={true} arrows={true} >
           <div className="my-auto">
