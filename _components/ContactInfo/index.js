@@ -5,7 +5,7 @@ import { Row, Col } from "antd";
 const ContactInfo = props => {
   console.log(props.className)
   return (
-    <div className={`w-100 bg-red-200 absolute bottom-0 ${props.className || ''}`} style={{ width: '100%' }}>
+    <div className={`w-100 bg-red-200 ${props.className || ''}`} style={{ width: '100%' }}>
       <Row className="max-w-screen-xl py-4 text-left text-gray mx-auto">
         <Col md={{ span: 8 }} className="p-3" >
           <div className="font-bold text-2xl mb-2">
