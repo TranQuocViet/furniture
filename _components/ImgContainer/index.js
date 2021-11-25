@@ -2,9 +2,9 @@ import React from "react";
 import Image from "next/image";
 
 const ImgContainer = props => {
-  const { width, height, src, className, key } = props
+  const { width, height, src, className } = props
   return (
-    <div style={{ width, height }} className="overflow-hidden" key={key}>
+    <div style={{ width, height }} className="overflow-hidden hover:cursor-pointer">
       <Image
         src={src}
         className={className}
@@ -13,4 +13,4 @@ const ImgContainer = props => {
   )
 }
 
-export default Image
+export default ImgContainer

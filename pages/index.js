@@ -30,7 +30,7 @@ export default function Home(props) {
           </div>
           <div>
             <Row className="max-w-screen-xl mx-auto">
-              <Col md={{ span: 12 }} className="text-justify text-right p-4 font-sans text-base md:text-lg ">
+              <Col md={{ span: 12 }} className="text-justify text-right p-4 font-sans text-base md:text-lg">
 
                 <p>Lời đầu tiên, Công Ty TNHH ĐT SX & Thiết Kế Nội Thất TL xin gửi tới Quý Khách hàng lời chúc sức khỏe, thành công và lời chào trân trọng nhất!</p>
                 <p>Công ty chúng tôi cũng xin gửi lời cảm ơn chân thành nhất tới những khách hàng đã, đang và sẽ cho phép chúng tôi được trở thành người bạn đồng hành cũng như đã dành sự tín nhiệm và ủng hộ tới sản phẩm, dịch vụ mà công ty chúng tôi cung cấp.</p>
