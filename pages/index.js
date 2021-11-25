@@ -15,12 +15,20 @@ import img4 from 'public/img/4.jpg'
 export default function Home(props) {
   return (
     <Layout {...props} activeUrl='/'>
-      <div className="w-100 overflow-hidden">
-        <Carousel dots={true} autoplay={true} arrows={true} >
-          <div className="my-auto w-100">
+      <div className="w-screen overflow-hidden">
+        <Carousel
+          dots={true}
+          autoplay={true}
+          arrows={true}
+          draggable={true}
+          slidesToShow={1}
+          slidesToScroll={1}
+        // fade={true}
+        >
+          <div className="my-auto w-100 hover:cursor-pointer">
             <Image src={slide1} height="800" />
           </div>
-          <div className="my-auto w-100">
+          <div className="my-auto w-100 hover:cursor-pointer">
             <Image src={slide2} height="800" />
           </div>
         </Carousel>

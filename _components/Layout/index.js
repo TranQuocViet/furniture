@@ -14,6 +14,11 @@ const Layout = props => {
         </div>
       </div>
       <ContactInfo />
+      <div className="border fixed bottom-3 left-3 w-max rounded-3xl p-3 bg-red-500 font-bold">
+        <a href="tel:0383405969" className="text-white hover:text-white tracking-widest">
+          Hotline: 0383405969
+        </a>
+      </div>
       <Footer />
     </div>
   )
